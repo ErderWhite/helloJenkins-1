@@ -1,4 +1,5 @@
 com\Jenkins\Operations.class
 com\Jenkins\App.class
 com\Jenkins\Employe.class
+com\Jenkins\EmployeProduction.class
 com\Jenkins\EmployeVente.class
