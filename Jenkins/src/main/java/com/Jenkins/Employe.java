@@ -1,10 +1,11 @@
 package com.Jenkins;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public abstract class Employe {
 	
-	protected int numEmploye;
+	protected int numEmploye = 0;
 	protected String nom, prenom, telephone;
 	protected LocalDate dateNaissance, dateEmbauche;
 	protected double salaire, prime;
@@ -16,6 +17,24 @@ public abstract class Employe {
 		this.telephone = telephone;
 		this.dateNaissance = dateNaissance;
 		this.dateEmbauche = dateEmbauche;
+		
+		calculprime();
+		
+		numEmploye++;
+	}
+	
+	public void calculprime()
+	{
+		long anciennete = ChronoUnit.YEARS.between(LocalDate.now(), dateEmbauche);
+		
+		if(anciennete < 5)
+		{
+			salaire *= 1.02;
+		}
+		else
+		{
+			salaire *= 1.07;
+		}
 	}
 	
 	public abstract void calculSalaire();

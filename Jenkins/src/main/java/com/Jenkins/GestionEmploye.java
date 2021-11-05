@@ -81,23 +81,60 @@ public class GestionEmploye {
 			
 			System.out.println("Saisir 1 pour employé vente et 2 pour employé production ou autre pour sortir");
 			type = sc.nextInt();
+			
+			listeEmploye.add(e);
 		}
 		
 	}
 	
 	public void modifierEmploye()
 	{
+		Employe e = chercherEmploye();
+	
+		System.out.println("Saisir : \n 1 : nom, \n 2 : prenom, \n 3 : telephone,...");
+		int choix = sc.nextInt();
+		
+		while(choix >= 1 && choix <= 8)
+		{
+			switch (choix) {
+			case 1:
+				System.out.println("Saisir le nouveau nom :");
+				String nom = sc.next();
+				
+				e.setNom(nom); // listeEmploye.get(numE+1).setNom(nom);
+				
+				break;
+	
+			default:
+				break;
+			}
+		}
 		
 	}
 	
 	public void supprimerEmploye()
 	{
+		System.out.println("Saisir le num employé a supprimé : ");
+		int numE = sc.nextInt();
 		
+		listeEmploye.remove(numE+1);		
 	}
 	
 	public void afficherEmploye()
 	{
+		Employe e = chercherEmploye();
 		
+		System.out.println("nom : " + e.getNom() + ", prenom : " + e.getPrenom() + ", ...");
+	}
+	
+	public Employe chercherEmploye()
+	{
+		System.out.println("Saisir le num employé : ");
+		int numE = sc.nextInt();
+		
+		Employe e = listeEmploye.get(numE+1);
+		
+		return e;
 	}
 
 }

@@ -10,6 +10,8 @@ public class EmployeVente extends Employe {
 			double cA) {
 		super(nom, prenom, telephone, dateNaissance, dateEmbauche);
 		CA = cA;
+		
+		calculSalaire();
 	}
 
 	@Override

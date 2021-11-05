@@ -10,6 +10,8 @@ public class EmployeProduction extends Employe {
 			LocalDate dateEmbauche, int nbUnite) {
 		super(nom, prenom, telephone, dateNaissance, dateEmbauche);
 		this.nbUnite = nbUnite;
+		
+		calculSalaire();
 	}
 
 
