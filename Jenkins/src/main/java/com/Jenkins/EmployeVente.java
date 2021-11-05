@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class EmployeVente extends Employe {
 	
-	double CA;
+	private double CA;
 
 	public EmployeVente(String nom, String prenom, String telephone, LocalDate dateNaissance, LocalDate dateEmbauche,
 			double cA) {
@@ -17,5 +17,15 @@ public class EmployeVente extends Employe {
 		// TODO Auto-generated method stub
 		salaire = 0.25 * CA + 400;
 	}
+
+	public double getCA() {
+		return CA;
+	}
+
+	public void setCA(double cA) {
+		CA = cA;
+	}
+	
+	
 
 }

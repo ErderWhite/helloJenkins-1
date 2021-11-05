@@ -4,10 +4,10 @@ import java.time.LocalDate;
 
 public abstract class Employe {
 	
-	int numEmploye;
-	String nom, prenom, telephone;
-	LocalDate dateNaissance, dateEmbauche;
-	double salaire, prime;
+	protected int numEmploye;
+	protected String nom, prenom, telephone;
+	protected LocalDate dateNaissance, dateEmbauche;
+	protected double salaire, prime;
 	
 	public Employe(String nom, String prenom, String telephone, LocalDate dateNaissance, LocalDate dateEmbauche) {
 		super();
