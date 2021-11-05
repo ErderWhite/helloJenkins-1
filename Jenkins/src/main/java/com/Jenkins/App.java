@@ -8,6 +8,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	// permet de gérer les opérations sur les employés: créer, modifier, supprimer,...
+        GestionEmploye ge = new GestionEmploye();
+        ge.menu();
     }
 }
